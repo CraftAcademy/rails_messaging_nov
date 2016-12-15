@@ -27,6 +27,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'pry'
+	gem 'poltergeist'
+  gem 'phantomjs', require: 'phantomjs/poltergeist'
 end
 
 group :production do
