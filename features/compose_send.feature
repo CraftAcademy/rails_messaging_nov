@@ -4,7 +4,7 @@ Feature: Compose message and send
 
   Background:
     Given I am logged in as User
-    And There is another user named "Test-User" in the system
+    And that there is a user named "Belle"
     And I have clicked the "Compose" button
 
   Scenario:
