@@ -3,22 +3,12 @@ Feature: Compose message and send
   I can compose a message and send it
 
   Background:
-    Given I am logged in as User
+    Given that there is a user named "Test-User"
+    And "Test-User" is logged in
     And that there is a user named "Belle"
     And I am on the "inbox" page
+#    And show me the page
     And I click "Compose"
 
   Scenario:
-    Given I am on the "Compose Message" page
-    Then I should see a label for "Recipients"
-    And I should see a corresponding text field with id of "conversation_recipients_chosen"
-    And I should see a label for "Subject"
-    And I should see a corresponding text field with id of "conversation_subject"
-    And I should see a label for "Message"
-    And I should see a corresponding text area with value of id of "conversation_body"
-    And I should see a submit button with value of "Send Message"
-
-#  Scenario:
-#    When I click the "Recipients" text field
-#    And I should be able to chooose a recipient
-#    And I sh
+    When I select "Belle" from recipients

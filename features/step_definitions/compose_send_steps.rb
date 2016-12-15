@@ -4,3 +4,9 @@ Given(/^I am logged in as User$/) do
     And "Test-User" is logged in
 	}
 end
+
+
+When(/^I select "([^"]*)" from recipients$/) do |recipient|
+		fill_in :recipients, with: "#{recipient}"
+end
+
