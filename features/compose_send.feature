@@ -5,7 +5,8 @@ Feature: Compose message and send
   Background:
     Given I am logged in as User
     And that there is a user named "Belle"
-    And I have clicked the "Compose" button
+    And I am on the "inbox" page
+    And I click "Compose"
 
   Scenario:
     Given I am on the "Compose Message" page

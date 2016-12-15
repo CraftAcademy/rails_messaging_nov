@@ -4,7 +4,3 @@ Given(/^I am logged in as User$/) do
     And "Test-User" is logged in
 	}
 end
-
-And(/^I have clicked the "([^"]*)" button$/) do |button|
-	click_button button
-end
