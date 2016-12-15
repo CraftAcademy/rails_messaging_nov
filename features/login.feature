@@ -8,7 +8,6 @@ Feature: Login
      When I fill in "Email" with "email@random.com"
      And I fill in "Password" with "password"
      Then I click "Log in"
-     And show me the page
      Then I should see "Signed in successfully."
 
 
