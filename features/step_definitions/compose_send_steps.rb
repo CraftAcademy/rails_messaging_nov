@@ -7,6 +7,9 @@ end
 
 
 When(/^I select "([^"]*)" from recipients$/) do |recipient|
-		fill_in :recipients, with: "#{recipient}"
+  @user = User.find_by(name: recipient)
+	page.execute_script("$('select').val(#{@user.id})")
+  page.execute_script("$('select').trigger('chosen:updated')")
+  expect(page).to have_content recipient
 end
 

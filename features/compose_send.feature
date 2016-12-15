@@ -10,5 +10,6 @@ Feature: Compose message and send
 #    And show me the page
     And I click "Compose"
 
+  @javascript
   Scenario:
     When I select "Belle" from recipients
