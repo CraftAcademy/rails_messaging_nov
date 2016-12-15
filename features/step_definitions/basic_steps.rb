@@ -17,6 +17,10 @@ Given(/^that there is a user named "([^"]*)"$/) do |name|
   user = FactoryGirl.create(:user, name: name)
 end
 
+Given(/^that there is a user named "([^"]*)" with an email of "([^"]*)"$/) do |name, email|
+  user = FactoryGirl.create(:user, name: name, email: email)
+end
+
 Given(/^"([^"]*)" is logged in$/) do |name|
   user = User.find_by(name: name)
   login_as(user, scope: :user)
@@ -49,6 +53,3 @@ end
 Given(/^show me the page$/) do
   save_and_open_page
 end
-
-
-
