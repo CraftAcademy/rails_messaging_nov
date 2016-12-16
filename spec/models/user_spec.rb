@@ -11,5 +11,9 @@ RSpec.describe User, type: :model do
     it 'the mailbox name should be subject.name' do
       expect(subject.mailboxer_name).to eq subject.name
     end
+
+    it 'the mailbox email should be subject.email' do
+      expect(subject.mailboxer_email(subject.email)).to eq subject.email
+    end
   end
 end
