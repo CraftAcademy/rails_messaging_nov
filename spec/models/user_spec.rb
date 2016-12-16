@@ -18,10 +18,16 @@ RSpec.describe User, type: :model do
   end
 
   describe 'DB table' do
-    it { is_expected.to have_db_column :name }
+    it { should have_db_column :name }
+    it { should have_db_column :email }
   end
 
   describe 'validations' do
-    it { is_expected.to validate_presence_of :name }
+    it { should validate_presence_of :name }
+    it { should validate_presence_of :email }
+  end
+
+  describe 'validate uniqueness' do
+    it { should validate_uniqueness_of(:name) }
   end
 end
