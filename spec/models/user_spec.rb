@@ -7,7 +7,7 @@ RSpec.describe User, type: :model do
     end
   end
 
-  describe 'user' do
+  describe 'Mailboxer methods' do
     it '#mailbox_name should return subject.name' do
       expect(subject.mailboxer_name).to eq subject.name
     end
