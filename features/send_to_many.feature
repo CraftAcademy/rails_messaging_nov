@@ -2,12 +2,11 @@ Feature: Send message to more than one recipient
 
   Background:
     Given the following users exist
-    | users     |
+    | name     |
     | Test-User |
     | Belle     |
     | Beast     |
     And "Test-User" is logged in
-    And show me the page
     And I am on the "inbox" page
     And I click "Compose"
 
