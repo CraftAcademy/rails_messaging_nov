@@ -2,7 +2,7 @@ Feature: Send message to more than one recipient
 
   Background:
     Given the following users exist
-    | name     |
+    | name      |
     | Test-User |
     | Belle     |
     | Beast     |
