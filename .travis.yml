@@ -18,4 +18,4 @@ deploy:
   on:
     repo: CraftAcademy/rails_messaging_nov
   run:
-    - rails db:migrate
+    - bundle exec rake db:migrate
