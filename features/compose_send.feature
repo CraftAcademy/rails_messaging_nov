@@ -8,7 +8,6 @@ Feature: Compose message and send
     And "Test-User" is logged in
     And that there is a user named "Belle"
     And I am on the "inbox" page
-#    And show me the page
     And I click "Compose"
 
   @javascript
