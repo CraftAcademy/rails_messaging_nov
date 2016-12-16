@@ -10,7 +10,6 @@ Feature: Compose message and send
     And I am on the "inbox" page
     And I click "Compose"
 
-  @javascript
   Scenario:
     When I select "Belle" from recipients
     And I fill in "Subject" with "subject"
