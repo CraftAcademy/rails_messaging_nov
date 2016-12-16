@@ -16,4 +16,8 @@ RSpec.describe User, type: :model do
       expect(subject.mailboxer_email(subject.email)).to eq subject.email
     end
   end
+
+  describe 'DB table' do
+    it { is_expected.to have_db_column :name }
+  end
 end
