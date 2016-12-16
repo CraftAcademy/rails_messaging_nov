@@ -16,20 +16,13 @@ Feature: Send message to more than one recipient
     And I fill in "Subject" with "subject"
     And I fill in "Message" with "message to Belle and Beast"
     And I click "Send Message"
-    And I should see "Your message was successfully sent"
-    And I click "Logout"
-    And I should be on the "index" page
-    And I should see "Signed out successfully."
+    Then I should see "Your message was successfully sent"
+    When I click "Logout"
+    Then I should see "Signed out successfully."
     Given "Belle" is logged in
     And I am on the "inbox" page
-    Then I should see "Test-User"
-    And I should see "subject"
-    And I should see "message to Belle and Beast"
+    Then I should see "message to Belle and Beast"
     And I click "Logout"
-    And I should be on the "index" page
-    And I should see "Signed out successfully."
     Given "Beast" is logged in
     And I am on the "inbox" page
-    Then I should see "Test-User"
-    And I should see "subject"
-    And I should see "message to Belle and Beast"
+    Then I should see "message to Belle and Beast"
