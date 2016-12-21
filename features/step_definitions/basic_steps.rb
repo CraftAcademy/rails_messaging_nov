@@ -35,6 +35,8 @@ Given(/^I am on the "([^"]*)" page$/) do |page|
       visit new_user_session_path
   elsif page == "sign up"
       visit new_user_registration_path
+  elsif page == "sent"
+      visit mailbox_sent_path
   end
 end
 
